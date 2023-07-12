@@ -105,7 +105,7 @@ npm start
 Contributions, issues, and feature requests are welcome!
 
 ##👍 Contributors
-Feel free to check the [issues page](https://github.com/MargaretTechworldToDo-tasks/issues).
+Feel free to check the [issues page](https://github.com/MargaretTechworld/ToDo-tasks/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> 
 
