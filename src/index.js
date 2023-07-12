@@ -1,4 +1,3 @@
-/* eslint-disable no-plusplus */
 import './style.css';
 
 const displayList = document.querySelector('.todo-list');
@@ -19,7 +18,7 @@ heading.textContent = "Today's Todo";
 heading.classList.add('heading', 'design');
 displayList.insertAdjacentElement('afterbegin', heading);
 
-for (let i = 0; i < toDoList.length; i++) {
+for (let i = 0; i < toDoList.length; i += 1) {
   displayList.innerHTML += `
  <div class="check-div design"> 
  <input type="checkbox" id="list${toDoList[i]}" name="list${toDoList[i]}" value="list">
