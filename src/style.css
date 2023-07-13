@@ -1,3 +1,51 @@
 body {
-  background-color: aqua;
+  background-color: #f6f6f6;
+}
+
+.heading {
+  font-size: 2rem;
+  padding: 3%;
+}
+
+.todo-list {
+  border: 2px solid #e9e9e9;
+  background: #fff;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.design {
+  border-bottom: 1px solid #d0d7de;
+}
+
+.input-design {
+  width: 94%;
+  padding: 3%;
+}
+
+input {
+  border: none;
+  padding: 3%;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  font-style: italic;
+  color: #a6a6a6;
+}
+
+.check-div {
+  padding: 3%;
+}
+
+.clear {
+  text-align: center;
+  color: #a6a6a6;
+  font-size: 1.2rem;
 }
