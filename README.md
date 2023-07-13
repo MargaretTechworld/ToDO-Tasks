@@ -46,6 +46,7 @@ To Do List.
   1. List Structure
   2. Dynamically created list of tasks.
   3. set style rules for To Do list
+  4. Add functionality to add and remove task
   
 
 
@@ -95,8 +96,7 @@ npm start
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-1. Add functionality to add and remove task
-2. Make list interactive
+1. Make list interactive
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
