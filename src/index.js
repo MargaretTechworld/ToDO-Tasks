@@ -1,32 +1,26 @@
 import './style.css';
+import TodoTask from './modules/add.js';
 
-const displayList = document.querySelector('.todo-list');
+const addList = document.querySelector('.add-list');
 
-const toDoList = [
-  { description: 'wash the dishes', completed: false, index: 0 },
-  { description: 'Clean the living room', completed: false, index: 1 },
-  { description: 'Completed to do list project', completed: false, index: 2 },
-];
+const todo = new TodoTask();
 
-const input = document.createElement('input');
-input.placeholder = 'Add your list';
-input.classList.add('input-design', 'design');
-displayList.insertAdjacentElement('afterbegin', input);
+document.addEventListener('DOMContentLoaded', () => {
+  todo.loadFromLocalStorage();
+});
 
-const heading = document.createElement('h1');
-heading.textContent = "Today's Todo";
-heading.classList.add('heading', 'design');
-displayList.insertAdjacentElement('afterbegin', heading);
+document.addEventListener('keyup', (e) => {
+  if (e.key === 'Enter') {
+    todo.saveTasks();
+    todo.addTasks();
+    todo.addLabelEventListeners();
+    todo.clearInput();
+  }
+});
 
-for (let i = 0; i < toDoList.length; i += 1) {
-  displayList.innerHTML += `
- <div class="check-div design"> 
- <input type="checkbox" id="list${toDoList[i]}" name="list${toDoList[i]}" value="list">
- <label for="list${toDoList[i]}">${toDoList[i].description}</label><br>
- </div>
- `;
-}
-const clear = document.createElement('p');
-clear.textContent = 'Clear all Do list project';
-clear.classList.add('clear');
-displayList.insertAdjacentElement('beforeend', clear);
+addList.addEventListener('click', () => {
+  todo.saveTasks();
+  todo.addTasks();
+  todo.addLabelEventListeners();
+  todo.clearInput();
+});
