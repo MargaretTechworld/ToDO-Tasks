@@ -37,8 +37,20 @@ i:hover {
   transform: translate(-50%, -50%);
 }
 
+.align {
+  align-self: center;
+}
+
 .design {
   border-bottom: 1px solid #d0d7de;
+}
+
+.check-completed {
+  width: 10%;
+}
+
+.check-completed:checked + .label {
+  text-decoration: line-through;
 }
 
 .input-design {
@@ -48,6 +60,7 @@ i:hover {
 input {
   border: none;
   padding: 3%;
+  width: 80%;
 }
 
 input:focus {
@@ -61,6 +74,8 @@ input::placeholder {
 
 .check-div {
   padding: 3%;
+  display: flex;
+  flex: 3;
 }
 
 .clear {
