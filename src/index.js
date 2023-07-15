@@ -2,6 +2,7 @@ import './style.css';
 import TodoTask from './modules/add.js';
 
 const addList = document.querySelector('.add-list');
+const clearall = document.querySelector('.clear');
 
 const todo = new TodoTask();
 
@@ -24,3 +25,5 @@ addList.addEventListener('click', () => {
   todo.addLabelEventListeners();
   todo.clearInput();
 });
+
+clearall.addEventListener('click', todo.clearTasks);

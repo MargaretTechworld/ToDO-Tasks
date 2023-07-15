@@ -38,6 +38,13 @@ class TodoTask {
     inputList.value = '';
   }
 
+ clearTasks = () => {
+   toDoList = toDoList.filter((task) => !task.completed);
+   displayList.innerHTML = '';
+   localStorage.setItem('tasks', JSON.stringify(toDoList));
+   this.addTasks();
+ };
+
   deleteTask = (id) => {
     const index = toDoList.findIndex((task) => task.index === id);
     if (index !== -1) {
@@ -72,6 +79,14 @@ class TodoTask {
       icon.addEventListener('click', () => {
         const id = parseInt(icon.dataset.id, 10);
         this.deleteTask(id);
+      });
+    });
+
+    const checkboxes = displayList.querySelectorAll('.check-completed');
+    checkboxes.forEach((checkbox, i) => {
+      checkbox.addEventListener('change', () => {
+        toDoList[i].completed = checkbox.checked;
+        this.saveToLocalStorage();
       });
     });
   };
