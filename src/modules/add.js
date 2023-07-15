@@ -38,11 +38,12 @@ class TodoTask {
     inputList.value = '';
   }
 
-   clearTasks = () => {
-     toDoList = toDoList.filter(() => false);
-     displayList.innerHTML = '';
-     localStorage.removeItem('tasks');
-   };
+ clearTasks = () => {
+   toDoList = toDoList.filter((task) => !task.completed);
+   displayList.innerHTML = '';
+   localStorage.setItem('tasks', JSON.stringify(toDoList));
+   this.addTasks();
+ };
 
   deleteTask = (id) => {
     const index = toDoList.findIndex((task) => task.index === id);
