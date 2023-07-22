@@ -1,8 +1,8 @@
 const addTasks = () => {
   const displayList = document.querySelector('.todo-list');
-  const toDoList = [{description:'sleep',completed: false, index: 1}]
-  localStorage.setItem('tasks', JSON.stringify(toDoList))
-   displayList.innerHTML = toDoList.map((task, i) => `
+  const toDoList = [{ description: 'sleep', completed: false, index: 1 }];
+  localStorage.setItem('tasks', JSON.stringify(toDoList));
+  displayList.innerHTML = toDoList.map((task, i) => `
     <div class="task" data-id="${i}">
       <div class="icon-design">
         <div class="check-div design"> 
@@ -16,21 +16,20 @@ const addTasks = () => {
       </div>
     </div>
   `).join('');
-
 };
 
 const deleteTask = (id) => {
-  const toDoList = JSON.parse(localStorage.getItem('tasks'))
+  const toDoList = JSON.parse(localStorage.getItem('tasks'));
   const index = toDoList.findIndex((task) => task.index === id);
   if (index !== -1) {
     toDoList.splice(index, 1);
     for (let i = 0; i < toDoList.length; i += 1) {
       toDoList[i].index = i + 1;
     }
-    
-    localStorage.setItem('tasks', JSON.stringify(toDoList))
+
+    localStorage.setItem('tasks', JSON.stringify(toDoList));
     const displayList = document.querySelector('.todo-list');
-   displayList.innerHTML = toDoList.map((task, i) => `
+    displayList.innerHTML = toDoList.map((task, i) => `
     <div class="task" data-id="${i}">
       <div class="icon-design">
         <div class="check-div design"> 
@@ -45,6 +44,6 @@ const deleteTask = (id) => {
     </div>
   `).join('');
   }
-}
+};
 
-export { addTasks, deleteTask }
+export { addTasks, deleteTask };
