@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1690029743452" clover="3.2.0">
-  <project timestamp="1690029743452" name="All files">
+<coverage generated="1690033408886" clover="3.2.0">
+  <project timestamp="1690033408886" name="All files">
     <metrics statements="35" coveredstatements="33" conditionals="10" coveredconditionals="5" methods="15" coveredmethods="13" elements="60" coveredelements="51" complexity="0" loc="35" ncloc="35" packages="1" files="3" classes="3"/>
-    <file name="local_storage.js" path="D:\Microverse\Module 2\Projects\ToDO-Tasks\src\modules\local_storage.js">
+    <file name="local_storage.js" path="C:\Users\AJUA\ToDO-Tasks\src\modules\local_storage.js">
       <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <line num="3" count="4" type="stmt"/>
       <line num="5" count="1" type="cond" truecount="2" falsecount="0"/>
     </file>
-    <file name="operation.js" path="D:\Microverse\Module 2\Projects\ToDO-Tasks\src\modules\operation.js">
+    <file name="operation.js" path="C:\Users\AJUA\ToDO-Tasks\src\modules\operation.js">
       <metrics statements="18" coveredstatements="17" conditionals="2" coveredconditionals="1" methods="8" coveredmethods="7"/>
       <line num="7" count="1" type="stmt"/>
       <line num="10" count="1" type="stmt"/>
@@ -28,7 +28,7 @@
       <line num="36" count="1" type="stmt"/>
       <line num="38" count="1" type="stmt"/>
     </file>
-    <file name="util.js" path="D:\Microverse\Module 2\Projects\ToDO-Tasks\src\modules\util.js">
+    <file name="util.js" path="C:\Users\AJUA\ToDO-Tasks\src\modules\util.js">
       <metrics statements="15" coveredstatements="14" conditionals="6" coveredconditionals="2" methods="5" coveredmethods="4"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
