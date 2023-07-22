@@ -253,6 +253,15 @@ span.cline-neutral { background: #eaeaea; }
 .cover-empty {
   display: inline-block;
   height: 12px;
+  
+}
+
+.cover-fill{
+    width: 89%;
+}
+
+.cover-empty{
+  width: 11%;
 }
 
 .chart {
